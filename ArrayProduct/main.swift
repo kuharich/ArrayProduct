@@ -8,5 +8,22 @@
 
 import Foundation
 
-print("Hello, World!")
+func arrayProduct(_ input:[Int]) -> [Int] {
+    var output = [Int]()
+    var product = 0
+    
+    for index in 0 ..< input.count {
+        product = 1
+        for index1 in 0 ..< input.count {
+            if index != index1 {
+                product *= input[index1]
+            }
+        }
+        output.append(product)
+    }
+    return output
+}
 
+let input = [1, 2, 3]
+print("input: \(input)")
+print("output: \(arrayProduct(input))")
