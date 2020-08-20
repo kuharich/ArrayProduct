@@ -8,15 +8,15 @@
 
 import Foundation
 
-func arrayProduct(_ input:[Int]) -> [Int] {
+func arrayProduct(_ nums:[Int]) -> [Int] {
     var output = [Int]()
     var product = 0
     
-    for index in 0 ..< input.count {
+    for index in 0 ..< nums.count {
         product = 1
-        for index1 in 0 ..< input.count {
+        for index1 in 0 ..< nums.count {
             if index != index1 {
-                product *= input[index1]
+                product *= nums[index1]
             }
         }
         output.append(product)
@@ -24,6 +24,6 @@ func arrayProduct(_ input:[Int]) -> [Int] {
     return output
 }
 
-let input = [1, 2, 3]
-print("input: \(input)")
-print("output: \(arrayProduct(input))")
+let nums = [1, 2, 3, 4]
+print("Input: \(nums)")
+print("Output: \(arrayProduct(nums))")
